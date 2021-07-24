@@ -1,0 +1,37 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+    <!-- Location ID Column -->
+    <ng-container matColumnDef="locationId">
+      <mat-header-cell *matHeaderCellDef>Location Id</mat-header-cell>
+      <mat-cell *matCellDef="let address">{{ address.locationId }}</mat-cell>
+    </ng-container>
+    <!-- Street Number Column -->
+    <ng-container matColumnDef="streetNumber">
+      <mat-header-cell *matHeaderCellDef>Street No.</mat-header-cell>
+      <mat-cell *matCellDef="let address">{{ address.streetNumber }}</mat-cell>
+    </ng-container>
+    <!-- Street Name Column -->
+    <ng-container matColumnDef="streetName">
+      <mat-header-cell *matHeaderCellDef>Street Name </mat-header-cell>
+      <mat-cell *matCellDef="let address">{{ address.streetName }}</mat-cell>
+    </ng-container>
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef>City</mat-header-cell>
+      <mat-cell *matCellDef="let address">{{ address.city }}</mat-cell>
+    </ng-container>
+    <!-- State Column -->
+    <ng-container matColumnDef="state">
+      <mat-header-cell *matHeaderCellDef>State</mat-header-cell>
+      <mat-cell *matCellDef="let address">{{ address.state }}</mat-cell>
+    </ng-container>
+    <!-- Zipcode Column -->
+    <ng-container matColumnDef="zipcode">
+      <mat-header-cell *matHeaderCellDef>Zipcode</mat-header-cell>
+      <mat-cell *matCellDef="let address">{{ address.zipcode }}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>
+
